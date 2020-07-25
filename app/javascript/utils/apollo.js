@@ -85,5 +85,6 @@ export const createClient = (cache, requestLink) => {
       createLinkWithToken(),
       createHttpLink(),
     ]),
+    cache,
   });
 };
