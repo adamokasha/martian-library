@@ -11,7 +11,7 @@ module Mutations
 
             token = Base64.encode64(user.email)
             {
-                token: token.
+                token: token,
                 user: user
             }
         end
