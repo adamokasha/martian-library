@@ -5,8 +5,9 @@ module Types
       null: false,
       description: "Returns a list of items in the martian library"
 
+    # eager load to avoid N + 1 problem
     def items
-      Item.all
+      Item.preload(:user)
     end
   end
 end
